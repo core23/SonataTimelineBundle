@@ -11,6 +11,7 @@
 
 namespace Sonata\TimelineBundle\Spread;
 
+use Doctrine\ORM\Internal\Hydration\IterableResult;
 use Spy\Timeline\Model\ActionInterface;
 use Spy\Timeline\Spread\Entry\EntryCollection;
 use Spy\Timeline\Spread\Entry\EntryUnaware;
@@ -78,7 +79,7 @@ class AdminSpread implements SpreadInterface
     /**
      * Returns corresponding users.
      *
-     * @return \Doctrine\ORM\Internal\Hydration\IterableResult
+     * @return IterableResult
      */
     protected function getUsers()
     {
